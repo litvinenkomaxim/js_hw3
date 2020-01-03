@@ -14,3 +14,10 @@ let obj = {
 	}
 }
 console.log(obj);
+
+let json = JSON.stringify(obj);
+console.log(obj);
+console.log(json);
+
+let back = JSON.parse(json);
+console.log(back);

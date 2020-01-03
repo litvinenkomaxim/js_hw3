@@ -7,16 +7,11 @@
 let person = {
   name: "John",
   age: 32,
-  job: "worker"
+  job: "worker",
 };
-
-let smartphone = {}
-smartphone.brand = prompt("Введите бренд");
-smartphone.model = prompt("Введите модель");
-smartphone.resolution = prompt("Введите разрешение");
-smartphone.color = prompt("Введите цвет");
-
-
-Object.assign(person, smartphone);
-console.log(smartphone);
+person.smartphone = {}
+person.smartphone.brand = prompt("Введите бренд");
+person.smartphone.model = prompt("Введите модель");
+person.smartphone.resolution = prompt("Введите разрешение");
+person.smartphone.color = prompt("Введите цвет");
 console.log(person);
