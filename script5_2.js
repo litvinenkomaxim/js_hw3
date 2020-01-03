@@ -7,17 +7,16 @@ prompt, и выведите его на экран.
 со значением, которое также 
 запрашивается из prompt. */
 
-let person = new Map([
-    ['name', 'Ivan'],
-    ['age', '27'],
-    ['height', 182],
-    ['wight', 79],
-    ['sex', 'male']
-])
-key = prompt()
-if (person.has(key)) {
-    alert(person.get(key))
+let person = {
+    name: "John",
+    age: 32,
+    job: "worker"
+};
+let key = prompt("Введите свойство");//вводим свойство
+if (key in person) {
+    alert(key + " " + person[key])//печать свойства, если оно есть в объекте
 } else {
-    person.set(key, prompt())
+    let value = prompt("Введите значение");//вводим значение нового свойства
+    person[key] = value;
 }
 console.log(person);
