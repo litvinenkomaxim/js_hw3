@@ -4,14 +4,31 @@
 дата в формате yyyy-MM-dd. Проверьте, попадает 
 ли введенная дата в диапазон дат объекта 
 dates.*/
-let date = new Date();
-alert(date);
-monthName = date.getDay();
-alert(monthName);
 
-let yearAgo = date - 365;
-alert(yearAgo);
+let nowDate = new Date();
+nowDate = nowDate.getTime();
 
-// let person = {
-//   date: date,
-// }
+let nextDate = new Date();
+nextDate.setDate(-365);
+nextDate = nextDate.getTime();
+
+let dates = {
+    first: nowDate,
+    last: nextDate,
+}
+
+let prDate = prompt('введите дату в формате yyyy-MM-dd');
+
+t = prDate.split('-'),
+    prYear = t[0],
+    prMonth = parseInt(t[1]) - 1,
+    prDay = parseInt(t[2]);
+
+let y = new Date(prYear, prMonth, prDay);
+y = y.getTime();
+
+if (dates.first > y && dates.last < y) {
+    alert('Введенная дата входит в диапазон')
+} else {
+    alert('Введенная дата не входит в диапазон')
+}
