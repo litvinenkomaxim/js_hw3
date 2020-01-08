@@ -6,9 +6,6 @@ let n = 25;
 let arr = []
 for (let i = 0; i < n; i++) {
     arr[i] = ((Math.random().toFixed(3)) * 10).toFixed(2);
-    let arrSquared = 1;
-    for (let k = 0; k < 5; k++) {
-        arrSquared = arrSquared * arr[i];
-    }
+    arrSquared = arr[i] ** 5
     console.log((i + 1) + '      ' + arr[i] + " в пятой степени = " + arrSquared)
 }

@@ -5,7 +5,7 @@
 // чисел массива и выведите в alert полученный результат.
 
 let arr = [];
-n = 13;
+n = 4;
 for (let i = 0; i < n; i++) {
   arr.push(prompt());
 }
@@ -14,7 +14,7 @@ let ammountNumbers = 0;
 let check
 for (let i = 0; i < arr.length; i++) {
   check = arr[i] * 2;
-  if (isNaN(check)) { } else {
+  if (isNaN(check) == false) {
     ammountNumbers = ammountNumbers + +arr[i];
   };
 }

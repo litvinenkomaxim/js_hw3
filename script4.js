@@ -9,8 +9,4 @@ arr.splice(arr.indexOf("однажды"), 1);
 arr.splice(3, 0, "однажды");
 arr.splice(arr.indexOf("фонарь"), 1)
 arr.splice(6, 0, "фонарь");
-str = ""
-for (let i = 0; i < arr.length; i++) {
-    str = str + arr[i] + ' ';
-}
-alert(str)
+console.log(arr.join(" "))
